@@ -43,7 +43,8 @@
 {
 	// Init the window
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	
+   // [window setMultipleTouchEnable:YES];
+//	window mul
 	// Try to use CADisplayLink director
 	// if it fails (SDK < 3.1) use the default director
 	if( ! [CCDirector setDirectorType:kCCDirectorTypeDisplayLink] )
@@ -55,6 +56,7 @@
 	// Init the View Controller
 	viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
 	viewController.wantsFullScreenLayout = YES;
+//    viewController.view en
 	
 	//
 	// Create the EAGLView manually
@@ -66,7 +68,8 @@
 								   pixelFormat:kEAGLColorFormatRGB565	// kEAGLColorFormatRGBA8
 								   depthFormat:0						// GL_DEPTH_COMPONENT16_OES
 						];
-	
+    
+	[glView setMultipleTouchEnabled:YES];
 	// attach the openglView to the director
 	[director setOpenGLView:glView];
 	

@@ -11,6 +11,7 @@
 #import "PBJTGameLayer.h"
 #import "PBJTPauseLayer.h"
 #import "MenuLayer.h"
+#import "MasterDataModelController.h"
 
 static PBJTScene* pbjtSharedScene;
 
@@ -57,6 +58,8 @@ static PBJTScene* pbjtSharedScene;
 }
 
 -(void) gameLoop:(ccTime) dt{
+    
+    
     //check if the game is paused
     if(!self.isGamePaused){
         if(self.gameLayer){

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@class PBJTUILayer, PBJTGameLayer, PBJTPauseLayer;
+@class PBJTUILayer, PBJTGameLayer, PBJTPauseLayer, TrackVO;
 @interface PBJTScene : CCScene {
     PBJTGameLayer *gameLayer;
     PBJTUILayer *uiLayer;
@@ -18,6 +18,8 @@
     BOOL isSongStarted;
     
     BOOL isGamePaused;
+    
+
 }
 
 
@@ -26,6 +28,8 @@
 @property (nonatomic, retain) PBJTPauseLayer *pauseLayer;
 @property (nonatomic) NSInteger score;
 @property BOOL isSongStarted, isGamePaused;
+
+
 
 +(PBJTScene*) sharedScene;
 

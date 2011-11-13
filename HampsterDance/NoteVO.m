@@ -21,7 +21,6 @@
         self.time = 0.00;
         // Initialization code here.
     }
-    
     return self;
 }
 

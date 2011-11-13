@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE094506146F11A9003F9E87 /* TrackVO.m in Sources */ = {isa = PBXBuildFile; fileRef = DE094505146F11A9003F9E87 /* TrackVO.m */; };
+		DE094516146F397A003F9E87 /* NoteGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DE094515146F397A003F9E87 /* NoteGameObject.m */; };
 		DE2383F01468FFBC007175D4 /* PBJTPauseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2383EF1468FFBC007175D4 /* PBJTPauseLayer.m */; };
 		DE274AAA146A42D800529C4A /* MasterDataModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE274AA9146A42D800529C4A /* MasterDataModelController.m */; };
 		DE274AC5146A47DC00529C4A /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = DE274AC4146A47DC00529C4A /* test.json */; };
@@ -140,6 +142,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE094504146F11A9003F9E87 /* TrackVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackVO.h; sourceTree = "<group>"; };
+		DE094505146F11A9003F9E87 /* TrackVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackVO.m; sourceTree = "<group>"; };
+		DE094514146F397A003F9E87 /* NoteGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteGameObject.h; sourceTree = "<group>"; };
+		DE094515146F397A003F9E87 /* NoteGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteGameObject.m; sourceTree = "<group>"; };
 		DE2383EE1468FFBC007175D4 /* PBJTPauseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJTPauseLayer.h; sourceTree = "<group>"; };
 		DE2383EF1468FFBC007175D4 /* PBJTPauseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJTPauseLayer.m; sourceTree = "<group>"; };
 		DE274AA8146A42D800529C4A /* MasterDataModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterDataModelController.h; sourceTree = "<group>"; };
@@ -451,6 +457,8 @@
 			children = (
 				DE274AC9146A4B9F00529C4A /* NoteVO.h */,
 				DE274ACA146A4B9F00529C4A /* NoteVO.m */,
+				DE094504146F11A9003F9E87 /* TrackVO.h */,
+				DE094505146F11A9003F9E87 /* TrackVO.m */,
 			);
 			name = VO;
 			sourceTree = "<group>";
@@ -853,6 +861,8 @@
 				DE31633914625F950090FA3A /* PBJTGameLayer.m */,
 				DE2383EE1468FFBC007175D4 /* PBJTPauseLayer.h */,
 				DE2383EF1468FFBC007175D4 /* PBJTPauseLayer.m */,
+				DE094514146F397A003F9E87 /* NoteGameObject.h */,
+				DE094515146F397A003F9E87 /* NoteGameObject.m */,
 			);
 			name = GameSection;
 			sourceTree = "<group>";
@@ -1036,6 +1046,8 @@
 				DE274B36146BA7A900529C4A /* SBJsonBase.m in Sources */,
 				DE274B37146BA7A900529C4A /* SBJsonParser.m in Sources */,
 				DE274B38146BA7A900529C4A /* SBJsonWriter.m in Sources */,
+				DE094506146F11A9003F9E87 /* TrackVO.m in Sources */,
+				DE094516146F397A003F9E87 /* NoteGameObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

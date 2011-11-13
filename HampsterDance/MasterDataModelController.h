@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class TrackVO;
 @interface MasterDataModelController : NSObject{
     
 }
 
 + (id)sharedInstance;
+
+-(TrackVO*)jsonParserCatalog:(NSString*)jString;
 
 @end

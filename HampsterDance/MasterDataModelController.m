@@ -9,6 +9,7 @@
 #import "MasterDataModelController.h"
 #import "JSON.h"
 #import "NoteVO.h"
+#import "TrackVO.h"
 
 static MasterDataModelController *sharedInstance = nil;
 
@@ -35,20 +36,18 @@ static MasterDataModelController *sharedInstance = nil;
 }
 
 
--(NSArray*)jsonParserCatalog:(NSString*)jString{
-	SBJsonParser *parser = [[[SBJsonParser alloc] init] autorelease];
-    NSMutableArray *result = [[[NSMutableArray alloc] init] autorelease];
-	NSDictionary *fullDic = [parser objectWithString:jString error:nil];
-    NSArray *notesArray = [fullDic objectForKey:@"notes"];
-    NSInteger ID = 0;
-    for(NSDictionary *note in notesArray){
-        NoteVO *noteVO = [[NoteVO alloc] initWithDictionary:note];
-        noteVO.ID = ID;
-        ID++;
-        [result addObject:noteVO];
+-(TrackVO*)jsonParserCatalog:(NSString*)jString{
+    NSString *testJsonFilePath = [[NSBundle mainBundle] pathForResource:jString ofType:@"json"];  
+    NSString *fileContents = [NSString stringWithContentsOfFile:testJsonFilePath encoding:NSUTF8StringEncoding error:nil];
+    
+	SBJSON *parser = [[[SBJSON alloc] init] autorelease];
+	NSDictionary *fullDic =  [parser objectWithString:fileContents error:nil];
+    if(fullDic == nil){
+        NSLog(@"cannot parse track file %@", jString);
     }
+    TrackVO *track = [[[TrackVO alloc] initWithDictionary:fullDic] autorelease];
 
-    return result;
+    return track;
 }
 
 @end
