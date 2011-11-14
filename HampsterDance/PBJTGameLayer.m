@@ -16,6 +16,9 @@
 @implementation PBJTGameLayer
 
 @synthesize songTime, track;
+@synthesize banana = _banana;
+@synthesize moveAction = _moveAction;
+@synthesize walkAction = _walkAction;
 
 -(id)init{
     if( (self=[super init])) {
@@ -46,8 +49,31 @@
         _noteDestroyTime = 80.0/NOTESPEED;
         _noteHitTime = 30.0/NOTESPEED;
         
+        
+        [self setupBananaAnimation];
+        
+        
     }
     return self;
+}
+
+-(void)setupBananaAnimation{
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:
+     @"BananaSpriteSheet_default.plist"];
+    CCSpriteBatchNode *spriteSheet = [CCSpriteBatchNode batchNodeWithFile:@"BananaSpriteSheet_default.png"];
+    [self addChild:spriteSheet];
+    NSMutableArray *walkAnimFrames = [NSMutableArray array];
+    for(int i = 1; i <= 8; ++i) {
+        [walkAnimFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName: [NSString stringWithFormat:@"banana%d.png", i]]];
+    }
+    CCAnimation *walkAnim = [CCAnimation animationWithFrames:walkAnimFrames delay:0.1f];
+    CGSize winSize = [CCDirector sharedDirector].winSize;
+    self.banana = [CCSprite spriteWithSpriteFrameName:@"banana1.png"]; 
+    self.banana.scale = 4.5;
+    _banana.position = ccp(winSize.width/2, winSize.height/2);
+    self.walkAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:walkAnim restoreOriginalFrame:NO]];
+    [_banana runAction:_walkAction];
+    [spriteSheet addChild:_banana];
 }
 
 -(void)dealloc{
