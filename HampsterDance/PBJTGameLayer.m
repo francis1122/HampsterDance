@@ -42,6 +42,9 @@
         _firstNotePlayed = NO;
         _secondNotePlayed = NO;
         _thirdNotePlayed = NO;
+        _missed = NO;
+
+        _moveDirection = 0;
         
         
         //noteDistanceToTravel/noteSpeed
@@ -74,6 +77,9 @@
     self.walkAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:walkAnim restoreOriginalFrame:NO]];
     [_banana runAction:_walkAction];
     [spriteSheet addChild:_banana];
+    
+    _animateWaitTime = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(translateBanana:) userInfo:nil repeats:YES];
+    
 }
 
 -(void)dealloc{
@@ -89,12 +95,38 @@
 
 -(void) gameLoop:(ccTime) dt{
     self.songTime += dt;
-
-    
-
+    if(_missed) 
+        [_animateWaitTime invalidate];
+    else if(![_animateWaitTime isValid]) 
+        _animateWaitTime = [NSTimer scheduledTimerWithTimeInterval:6 target:self selector:@selector(translateBanana:) userInfo:nil repeats:YES];
     [self spawnNotes];
     [self updateGameObjects:dt];
     
+}
+
+-(void)translateBanana:(ccTime)dt{
+    switch (_moveDirection) {
+        case 0:
+            [_banana runAction: [CCMoveBy actionWithDuration:1.75 position:ccp(-160,0)]];
+            _moveDirection = 1;
+            break;
+        case 1:
+            [_banana runAction: [CCMoveBy actionWithDuration:3 position:ccp(320,0)]];
+            _moveDirection = 2;
+            break;
+        case 2:
+            [_banana runAction: [CCMoveBy actionWithDuration:1.75 position:ccp(-160,85)]];
+            _moveDirection = 3;
+            break;
+        case 3:
+            [_banana runAction: [CCMoveBy actionWithDuration:1 position:ccp(0,-85)]];
+            _moveDirection = 0;
+            break;
+            
+        default:
+            break;
+            
+    }
 }
 
 -(void) resetNotesPlayed{

@@ -36,6 +36,10 @@
     CCAction *_walkAction;
     CCAction *_moveAction;
     BOOL _moving;
+    BOOL _missed;
+    
+    NSTimer *_animateWaitTime;
+    int _moveDirection;
 
 }
 
