@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define NOTESPEED 250.0
+#define NOTESPEED 400.0
 
 
 

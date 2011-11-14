@@ -166,7 +166,8 @@
                     _thirdNotePlayed = YES;
                 }
                 
-                [PBJTScene sharedScene].score += 100;
+                
+                [PBJTScene sharedScene].score += [self scoreEvaluator:songTime WithSongTime:noteGameObject.noteVO.time];
                 
                 delete = noteGameObject;
                 break;
@@ -176,6 +177,29 @@
     
     [_gameNotesArray removeObject:delete];
     [self removeChild:delete cleanup:YES];    
+}
+
+-(int) scoreEvaluator:(float)noteTime WithSongTime:(float)_songTime{
+    int score = 0;
+    //find absolute difference between the ideal time to play the note and the actually played note
+    float difference = noteTime -  _songTime;
+    difference = fabsf(difference);
+    //compare how far off it was from the actual play time of the note
+    float timingPercent = difference/_noteHitTime;
+    if(timingPercent < 0.3){
+        //perfect
+        score = 100;
+    }else if(timingPercent < 0.7){
+        //good
+        score = 80;
+    }else{
+        //ok
+        score = 50;
+    }
+    
+    
+    
+    return score;
 }
 
 -(BOOL) checkIfNoteHasBeenPlayed:(int)note{

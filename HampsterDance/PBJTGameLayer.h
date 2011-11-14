@@ -15,8 +15,11 @@
     float songTime;
     TrackVO *track;
     
+    // the time before the note is supposed to get played when it spawns.
     float _notePreSpawnTime;
+    // how long the note lives for after it was supposed to be played
     float _noteDestroyTime;
+    //the time range that the player can hit the note from when its supposed to be played
     float _noteHitTime;
     
     //gameObjects
@@ -44,8 +47,10 @@
 
 -(void) resetNotesPlayed;
 
+
 -(int)noteHit:(CGPoint) touch;
 -(void)checkNoteHit:(int)note;
+-(int) scoreEvaluator:(float)noteTime WithSongTime:(float)_songTime;
 -(BOOL) checkIfNoteHasBeenPlayed:(int)note;
 
 @end
