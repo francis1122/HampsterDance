@@ -34,11 +34,24 @@
     BOOL _firstNotePlayed;
     BOOL _secondNotePlayed;
     BOOL _thirdNotePlayed;
+    
+    CCSprite *banana;
+    CCAction *_walkAction;
+    CCAction *_moveAction;
+    BOOL _moving;
+    BOOL _missed;
+    
+    NSTimer *_animateWaitTime;
+    int _moveDirection;
+
 }
 
 
 @property float songTime;
 @property (nonatomic, retain) TrackVO *track;
+@property (nonatomic, retain) CCSprite *banana;
+@property (nonatomic, retain) CCAction *walkAction;
+@property (nonatomic, retain) CCAction *moveAction;
 
 -(void) gameLoop:(ccTime) dt;
 -(void) updateGameObjects:(ccTime) dt;
@@ -52,5 +65,6 @@
 -(void)checkNoteHit:(int)note;
 -(int) scoreEvaluator:(float)noteTime WithSongTime:(float)_songTime;
 -(BOOL) checkIfNoteHasBeenPlayed:(int)note;
+-(void)setupBananaAnimation;
 
 @end
