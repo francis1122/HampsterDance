@@ -11,6 +11,7 @@
 #import "PBJTGameLayer.h"
 #import "PBJTPauseLayer.h"
 #import "MenuLayer.h"
+#import "GameOverLayer.h"
 #import "MasterDataModelController.h"
 
 static PBJTScene* pbjtSharedScene;
@@ -28,6 +29,8 @@ static PBJTScene* pbjtSharedScene;
 	
 	if( (self=[super init])) {
         pbjtSharedScene = self;
+        _isSongEnded = NO;
+        _songEndedTimer = 0.0;
         self.score = 0;
         self.gameLayer = nil;
         self.uiLayer = nil;
@@ -62,21 +65,38 @@ static PBJTScene* pbjtSharedScene;
     
     //check if the game is paused
     if(!self.isGamePaused){
-        if(self.gameLayer){
-            [self.gameLayer gameLoop:dt];
+        if(!_isSongEnded){
+            
+
+            if(self.gameLayer){
+                [self.gameLayer gameLoop:dt];
+            }
+            //check if song is over
+            if(self.gameLayer.songTime > GAMESONG_LENGTH){
+                _isSongEnded = YES;
+            }
+        }else{
+            _songEndedTimer += dt;
+            if(_songEndedTimer > 5.0){
+                //transition to GameOverLayer
+                [self transitionToGameOverLayer];
+            }
         }
     }
 }
 
 
-#pragma mark - TransitionS
+#pragma mark - Transitions
 
 -(void) transitionToMainMenu{
-    
     [[CCDirector sharedDirector] replaceScene:[MenuLayer node]];
-    
 }
 
+-(void) transitionToGameOverLayer{
+    [[CCDirector sharedDirector] replaceScene: [GameOverLayer node]];    
+}
+
+#pragma mark - game state functions
 -(void) pauseGame{
     self.isGamePaused = YES;
     [self addChild: self.pauseLayer];

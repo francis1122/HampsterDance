@@ -139,6 +139,9 @@
 		DE31633714625A270090FA3A /* PBJTScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31633614625A270090FA3A /* PBJTScene.m */; };
 		DE31633A14625F950090FA3A /* PBJTGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31633914625F950090FA3A /* PBJTGameLayer.m */; };
 		DE31633D14625FD90090FA3A /* PBJTUILayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31633C14625FD80090FA3A /* PBJTUILayer.m */; };
+		DEE0B07C147391C100BE5DFF /* GameOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE0B07B147391C100BE5DFF /* GameOverLayer.m */; };
+		DEE0B07F147391CF00BE5DFF /* ShopLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE0B07E147391CF00BE5DFF /* ShopLayer.m */; };
+		DEE0B082147392C200BE5DFF /* GameSelectMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE0B081147392C200BE5DFF /* GameSelectMenu.m */; };
 		F25C902C1470F4E7008764CA /* BananaSpriteSheet_default.png in Resources */ = {isa = PBXBuildFile; fileRef = F25C902A1470F4E7008764CA /* BananaSpriteSheet_default.png */; };
 		F25C902D1470F4E7008764CA /* BananaSpriteSheet_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = F25C902B1470F4E7008764CA /* BananaSpriteSheet_default.plist */; };
 /* End PBXBuildFile section */
@@ -413,6 +416,12 @@
 		DE31633914625F950090FA3A /* PBJTGameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJTGameLayer.m; sourceTree = "<group>"; };
 		DE31633B14625FD80090FA3A /* PBJTUILayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJTUILayer.h; sourceTree = "<group>"; };
 		DE31633C14625FD80090FA3A /* PBJTUILayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJTUILayer.m; sourceTree = "<group>"; };
+		DEE0B07A147391C100BE5DFF /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverLayer.h; sourceTree = "<group>"; };
+		DEE0B07B147391C100BE5DFF /* GameOverLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverLayer.m; sourceTree = "<group>"; };
+		DEE0B07D147391CF00BE5DFF /* ShopLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopLayer.h; sourceTree = "<group>"; };
+		DEE0B07E147391CF00BE5DFF /* ShopLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopLayer.m; sourceTree = "<group>"; };
+		DEE0B080147392C200BE5DFF /* GameSelectMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSelectMenu.h; sourceTree = "<group>"; };
+		DEE0B081147392C200BE5DFF /* GameSelectMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSelectMenu.m; sourceTree = "<group>"; };
 		F25C902A1470F4E7008764CA /* BananaSpriteSheet_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BananaSpriteSheet_default.png; sourceTree = "<group>"; };
 		F25C902B1470F4E7008764CA /* BananaSpriteSheet_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BananaSpriteSheet_default.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -512,10 +521,9 @@
 				DE316326146253F80090FA3A /* HelloWorldLayer.m */,
 				DE316332146257A60090FA3A /* Constants.h */,
 				DE316333146257A70090FA3A /* Constants.m */,
-				DE31632E146254D40090FA3A /* MenuLayer.h */,
-				DE31632F146254D40090FA3A /* MenuLayer.m */,
 				DE274AA8146A42D800529C4A /* MasterDataModelController.h */,
 				DE274AA9146A42D800529C4A /* MasterDataModelController.m */,
+				DEE0B0771473916500BE5DFF /* Menu Stuff */,
 				DE31633E146261750090FA3A /* GameSection */,
 				DE316328146253F80090FA3A /* GameConfig.h */,
 				DE3161CE146253F50090FA3A /* Resources */,
@@ -873,6 +881,21 @@
 			name = GameSection;
 			sourceTree = "<group>";
 		};
+		DEE0B0771473916500BE5DFF /* Menu Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				DE31632E146254D40090FA3A /* MenuLayer.h */,
+				DE31632F146254D40090FA3A /* MenuLayer.m */,
+				DEE0B07A147391C100BE5DFF /* GameOverLayer.h */,
+				DEE0B07B147391C100BE5DFF /* GameOverLayer.m */,
+				DEE0B07D147391CF00BE5DFF /* ShopLayer.h */,
+				DEE0B07E147391CF00BE5DFF /* ShopLayer.m */,
+				DEE0B080147392C200BE5DFF /* GameSelectMenu.h */,
+				DEE0B081147392C200BE5DFF /* GameSelectMenu.m */,
+			);
+			name = "Menu Stuff";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1059,6 +1082,9 @@
 				DE274B38146BA7A900529C4A /* SBJsonWriter.m in Sources */,
 				DE094506146F11A9003F9E87 /* TrackVO.m in Sources */,
 				DE094516146F397A003F9E87 /* NoteGameObject.m in Sources */,
+				DEE0B07C147391C100BE5DFF /* GameOverLayer.m in Sources */,
+				DEE0B07F147391CF00BE5DFF /* ShopLayer.m in Sources */,
+				DEE0B082147392C200BE5DFF /* GameSelectMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

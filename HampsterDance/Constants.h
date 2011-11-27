@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #define NOTESPEED 400.0
+#define GAMESONG_LENGTH 20.0
 
 
 

@@ -1,29 +1,28 @@
 //
-//  MenuLayer.m
-//  SuperSlotCar
+//  GameSelectMenu.m
+//  HampsterDance
 //
-//  Created by John Wilson on 9/13/11.
+//  Created by John Wilson on 11/15/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "MenuLayer.h"
-#import "PBJTScene.h"
 #import "GameSelectMenu.h"
+#import "PBJTScene.h"
 
 
-@implementation MenuLayer
+@implementation GameSelectMenu
 
 -(id) init{
 	if( (self=[super init] )) {
-        CCLabelTTF* greatest = [CCLabelTTF labelWithString:@"Hampster Dance Game" fontName:SUPERSLOTCAR_FONT_1 fontSize:20];
+        CCLabelTTF* greatest = [CCLabelTTF labelWithString:@"Game Select Layer" fontName:SUPERSLOTCAR_FONT_1 fontSize:20];
         greatest.position = ccp(280, 249);
         ccColor3B green = {154, 255, 56};
         [greatest setColor:green];
         [self addChild:greatest];
-
         
-       // CCLabelTTF *timeTrailLabel = [CCLabelTTF labelWithString:@"Time Trail" fontName:@"AppleGothic" fontSize:20];
-       // CCMenuItemLabel *timeTrailerButton = [CCMenuItemLabel itemWithLabel:timeTrailLabel target:self selector:@selector(timeTrailTouched:)];
+        
+        // CCLabelTTF *timeTrailLabel = [CCLabelTTF labelWithString:@"Time Trail" fontName:@"AppleGothic" fontSize:20];
+        // CCMenuItemLabel *timeTrailerButton = [CCMenuItemLabel itemWithLabel:timeTrailLabel target:self selector:@selector(timeTrailTouched:)];
         CCSprite *sprite = [CCSprite spriteWithFile:@"Icon-72.png"];
         CCSprite *sprite2 = [CCSprite spriteWithFile:@"Icon-72.png"];
         CCSprite *sprite3 = [CCSprite spriteWithFile:@"Icon-72.png"];
@@ -34,12 +33,15 @@
         CCMenu *menu = [CCMenu menuWithItems:spriteTimeTrailButton, nil];
         menu.position = CGPointZero;
         [self addChild:menu];
+        
     }
     return self;
 }
 
 -(void)timeTrailTouched:(CCMenuItem*)sender{
-    [[CCDirector sharedDirector] replaceScene:[GameSelectMenu node]];
-}
     
+    
+    [[CCDirector sharedDirector] replaceScene:[PBJTScene node]];
+}
+
 @end

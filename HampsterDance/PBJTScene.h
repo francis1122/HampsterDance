@@ -19,6 +19,10 @@
     
     BOOL isGamePaused;
     
+    
+    //transition To GameOverLayer
+    BOOL _isSongEnded;
+    float _songEndedTimer;
 
 }
 
@@ -40,10 +44,12 @@
 
 -(void) gameLoop:(ccTime) dt;
 
+#pragma mark - Transitions
 -(void) transitionToMainMenu;
+-(void) transitionToGameOverLayer;
 
+#pragma mark - game state functions
 -(void) pauseGame;
-
 -(void) unPauseGame;
 
 @end
