@@ -12,11 +12,13 @@
 @interface PBJTUILayer : CCLayer {
  
     CCLabelTTF *scoreLabel;
+    CCLabelTTF *comboLabel;
     
     CCMenu *pauseButton;
 }
 @property (nonatomic, retain) CCMenu *pauseButton;
 @property (nonatomic, retain) CCLabelTTF *scoreLabel;
+@property (nonatomic, retain) CCLabelTTF *comboLabel;
 
 
 

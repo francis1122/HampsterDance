@@ -13,12 +13,13 @@
 #import "MenuLayer.h"
 #import "GameOverLayer.h"
 #import "MasterDataModelController.h"
+#import "CDAudioManager.h"
 
 static PBJTScene* pbjtSharedScene;
 
 @implementation PBJTScene
 
-@synthesize gameLayer, uiLayer, score, isSongStarted, isGamePaused, pauseLayer;
+@synthesize gameLayer, uiLayer, score, isSongStarted, isGamePaused, pauseLayer, combo;
 
 +(PBJTScene*) sharedScene{
     NSAssert(pbjtSharedScene != nil, @"pbjtSharedScene not available!");
@@ -32,6 +33,7 @@ static PBJTScene* pbjtSharedScene;
         _isSongEnded = NO;
         _songEndedTimer = 0.0;
         self.score = 0;
+        self.combo = 1;
         self.gameLayer = nil;
         self.uiLayer = nil;
         self.isGamePaused = NO;
@@ -42,6 +44,9 @@ static PBJTScene* pbjtSharedScene;
         
         [self addChild:self.gameLayer];
         [self addChild:self.uiLayer];
+        
+        [[CDAudioManager sharedManager] playBackgroundMusic:@"It 39s Peanut Butter Jelly Time.mp3" loop:YES];
+        [CDAudioManager sharedManager].backgroundMusic.numberOfLoops = 1;//To loop 3 times
         
 		[self schedule: @selector(gameLoop:)];
     }
@@ -55,9 +60,16 @@ static PBJTScene* pbjtSharedScene;
 
 -(void) setScore:(NSInteger)_score{
     if(self.uiLayer){
-        [self.uiLayer.scoreLabel setString:[NSString stringWithFormat:@"Score: %d", _score]];
+        [self.uiLayer.scoreLabel setString:[NSString stringWithFormat:@"%d", _score]];
     }
     score = _score;
+}
+
+-(void) setCombo:(NSInteger)_combo{
+    if(self.uiLayer){
+        [self.uiLayer.comboLabel setString:[NSString stringWithFormat:@"%dx", _combo]];
+    }
+    combo = _combo;
 }
 
 -(void) gameLoop:(ccTime) dt{
@@ -99,11 +111,13 @@ static PBJTScene* pbjtSharedScene;
 #pragma mark - game state functions
 -(void) pauseGame{
     self.isGamePaused = YES;
+    [[CDAudioManager sharedManager] pauseBackgroundMusic];
     [self addChild: self.pauseLayer];
 }
 
 -(void) unPauseGame{
     self.isGamePaused = NO;
+        [[CDAudioManager sharedManager] resumeBackgroundMusic];
     [self removeChild:self.pauseLayer cleanup:NO];
 }
 

@@ -13,4 +13,9 @@
     
 }
 
+-(void)retryButtonTouched:(CCMenuItem*)sender;
+
+-(void)menuButtonTouched:(CCMenuItem*)sender;
+
+
 @end

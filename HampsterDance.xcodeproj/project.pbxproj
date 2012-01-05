@@ -139,6 +139,18 @@
 		DE31633714625A270090FA3A /* PBJTScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31633614625A270090FA3A /* PBJTScene.m */; };
 		DE31633A14625F950090FA3A /* PBJTGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31633914625F950090FA3A /* PBJTGameLayer.m */; };
 		DE31633D14625FD90090FA3A /* PBJTUILayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31633C14625FD80090FA3A /* PBJTUILayer.m */; };
+		DE58046E149B20C4009106A9 /* CCSelectionMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DE58046D149B20C3009106A9 /* CCSelectionMenu.m */; };
+		DE580472149B25B2009106A9 /* CCMenuItemSelectionImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DE580471149B25AF009106A9 /* CCMenuItemSelectionImage.m */; };
+		DE5804A0149C87FE009106A9 /* It 39s Peanut Butter Jelly Time.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE58049F149C87FE009106A9 /* It 39s Peanut Butter Jelly Time.mp3 */; };
+		DE8AD66314B56C8200C568C6 /* Amiga Forever.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE8AD66214B56C8200C568C6 /* Amiga Forever.ttf */; };
+		DE8AD67C14B5794200C568C6 /* HardButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8AD67414B5794200C568C6 /* HardButton.png */; };
+		DE8AD67D14B5794200C568C6 /* MenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8AD67514B5794200C568C6 /* MenuButton.png */; };
+		DE8AD67E14B5794200C568C6 /* NormalButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8AD67614B5794200C568C6 /* NormalButton.png */; };
+		DE8AD67F14B5794200C568C6 /* PauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8AD67714B5794200C568C6 /* PauseButton.png */; };
+		DE8AD68014B5794200C568C6 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8AD67814B5794200C568C6 /* PlayButton.png */; };
+		DE8AD68114B5794200C568C6 /* QuitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8AD67914B5794200C568C6 /* QuitButton.png */; };
+		DE8AD68214B5794200C568C6 /* ResumeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8AD67A14B5794200C568C6 /* ResumeButton.png */; };
+		DE8AD68314B5794200C568C6 /* RetryButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8AD67B14B5794200C568C6 /* RetryButton.png */; };
 		DEE0B07C147391C100BE5DFF /* GameOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE0B07B147391C100BE5DFF /* GameOverLayer.m */; };
 		DEE0B07F147391CF00BE5DFF /* ShopLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE0B07E147391CF00BE5DFF /* ShopLayer.m */; };
 		DEE0B082147392C200BE5DFF /* GameSelectMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE0B081147392C200BE5DFF /* GameSelectMenu.m */; };
@@ -416,6 +428,20 @@
 		DE31633914625F950090FA3A /* PBJTGameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJTGameLayer.m; sourceTree = "<group>"; };
 		DE31633B14625FD80090FA3A /* PBJTUILayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJTUILayer.h; sourceTree = "<group>"; };
 		DE31633C14625FD80090FA3A /* PBJTUILayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJTUILayer.m; sourceTree = "<group>"; };
+		DE58046C149B20C1009106A9 /* CCSelectionMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSelectionMenu.h; sourceTree = "<group>"; };
+		DE58046D149B20C3009106A9 /* CCSelectionMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSelectionMenu.m; sourceTree = "<group>"; };
+		DE580470149B25AE009106A9 /* CCMenuItemSelectionImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMenuItemSelectionImage.h; sourceTree = "<group>"; };
+		DE580471149B25AF009106A9 /* CCMenuItemSelectionImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMenuItemSelectionImage.m; sourceTree = "<group>"; };
+		DE58049F149C87FE009106A9 /* It 39s Peanut Butter Jelly Time.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "It 39s Peanut Butter Jelly Time.mp3"; sourceTree = "<group>"; };
+		DE8AD66214B56C8200C568C6 /* Amiga Forever.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amiga Forever.ttf"; sourceTree = "<group>"; };
+		DE8AD67414B5794200C568C6 /* HardButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HardButton.png; sourceTree = "<group>"; };
+		DE8AD67514B5794200C568C6 /* MenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuButton.png; sourceTree = "<group>"; };
+		DE8AD67614B5794200C568C6 /* NormalButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NormalButton.png; sourceTree = "<group>"; };
+		DE8AD67714B5794200C568C6 /* PauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseButton.png; sourceTree = "<group>"; };
+		DE8AD67814B5794200C568C6 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayButton.png; sourceTree = "<group>"; };
+		DE8AD67914B5794200C568C6 /* QuitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuitButton.png; sourceTree = "<group>"; };
+		DE8AD67A14B5794200C568C6 /* ResumeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ResumeButton.png; sourceTree = "<group>"; };
+		DE8AD67B14B5794200C568C6 /* RetryButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RetryButton.png; sourceTree = "<group>"; };
 		DEE0B07A147391C100BE5DFF /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverLayer.h; sourceTree = "<group>"; };
 		DEE0B07B147391C100BE5DFF /* GameOverLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverLayer.m; sourceTree = "<group>"; };
 		DEE0B07D147391CF00BE5DFF /* ShopLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopLayer.h; sourceTree = "<group>"; };
@@ -521,6 +547,10 @@
 				DE316326146253F80090FA3A /* HelloWorldLayer.m */,
 				DE316332146257A60090FA3A /* Constants.h */,
 				DE316333146257A70090FA3A /* Constants.m */,
+				DE58046C149B20C1009106A9 /* CCSelectionMenu.h */,
+				DE58046D149B20C3009106A9 /* CCSelectionMenu.m */,
+				DE580470149B25AE009106A9 /* CCMenuItemSelectionImage.h */,
+				DE580471149B25AF009106A9 /* CCMenuItemSelectionImage.m */,
 				DE274AA8146A42D800529C4A /* MasterDataModelController.h */,
 				DE274AA9146A42D800529C4A /* MasterDataModelController.m */,
 				DEE0B0771473916500BE5DFF /* Menu Stuff */,
@@ -536,6 +566,9 @@
 		DE3161CE146253F50090FA3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DE8AD66514B56FDD00C568C6 /* assets */,
+				DE8AD66214B56C8200C568C6 /* Amiga Forever.ttf */,
+				DE58049F149C87FE009106A9 /* It 39s Peanut Butter Jelly Time.mp3 */,
 				F25C902A1470F4E7008764CA /* BananaSpriteSheet_default.png */,
 				F25C902B1470F4E7008764CA /* BananaSpriteSheet_default.plist */,
 				DE3161CF146253F50090FA3A /* Default.png */,
@@ -881,6 +914,21 @@
 			name = GameSection;
 			sourceTree = "<group>";
 		};
+		DE8AD66514B56FDD00C568C6 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				DE8AD67414B5794200C568C6 /* HardButton.png */,
+				DE8AD67514B5794200C568C6 /* MenuButton.png */,
+				DE8AD67614B5794200C568C6 /* NormalButton.png */,
+				DE8AD67714B5794200C568C6 /* PauseButton.png */,
+				DE8AD67814B5794200C568C6 /* PlayButton.png */,
+				DE8AD67914B5794200C568C6 /* QuitButton.png */,
+				DE8AD67A14B5794200C568C6 /* ResumeButton.png */,
+				DE8AD67B14B5794200C568C6 /* RetryButton.png */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
 		DEE0B0771473916500BE5DFF /* Menu Stuff */ = {
 			isa = PBXGroup;
 			children = (
@@ -958,6 +1006,16 @@
 				DE274AC5146A47DC00529C4A /* test.json in Resources */,
 				F25C902C1470F4E7008764CA /* BananaSpriteSheet_default.png in Resources */,
 				F25C902D1470F4E7008764CA /* BananaSpriteSheet_default.plist in Resources */,
+				DE5804A0149C87FE009106A9 /* It 39s Peanut Butter Jelly Time.mp3 in Resources */,
+				DE8AD66314B56C8200C568C6 /* Amiga Forever.ttf in Resources */,
+				DE8AD67C14B5794200C568C6 /* HardButton.png in Resources */,
+				DE8AD67D14B5794200C568C6 /* MenuButton.png in Resources */,
+				DE8AD67E14B5794200C568C6 /* NormalButton.png in Resources */,
+				DE8AD67F14B5794200C568C6 /* PauseButton.png in Resources */,
+				DE8AD68014B5794200C568C6 /* PlayButton.png in Resources */,
+				DE8AD68114B5794200C568C6 /* QuitButton.png in Resources */,
+				DE8AD68214B5794200C568C6 /* ResumeButton.png in Resources */,
+				DE8AD68314B5794200C568C6 /* RetryButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1085,6 +1143,8 @@
 				DEE0B07C147391C100BE5DFF /* GameOverLayer.m in Sources */,
 				DEE0B07F147391CF00BE5DFF /* ShopLayer.m in Sources */,
 				DEE0B082147392C200BE5DFF /* GameSelectMenu.m in Sources */,
+				DE58046E149B20C4009106A9 /* CCSelectionMenu.m in Sources */,
+				DE580472149B25B2009106A9 /* CCMenuItemSelectionImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@
 
 -(id) init{
 	if( (self=[super init] )) {
-        CCLabelTTF* greatest = [CCLabelTTF labelWithString:@"Hampster Dance Game" fontName:SUPERSLOTCAR_FONT_1 fontSize:20];
+        CCLabelTTF* greatest = [CCLabelTTF labelWithString:@"Hampster Dance Game" fontName:PBJT_FONT1 fontSize:20];
         greatest.position = ccp(280, 249);
         ccColor3B green = {154, 255, 56};
         [greatest setColor:green];
@@ -24,9 +24,9 @@
         
        // CCLabelTTF *timeTrailLabel = [CCLabelTTF labelWithString:@"Time Trail" fontName:@"AppleGothic" fontSize:20];
        // CCMenuItemLabel *timeTrailerButton = [CCMenuItemLabel itemWithLabel:timeTrailLabel target:self selector:@selector(timeTrailTouched:)];
-        CCSprite *sprite = [CCSprite spriteWithFile:@"Icon-72.png"];
-        CCSprite *sprite2 = [CCSprite spriteWithFile:@"Icon-72.png"];
-        CCSprite *sprite3 = [CCSprite spriteWithFile:@"Icon-72.png"];
+        CCSprite *sprite = [CCSprite spriteWithFile:@"PlayButton.png"];
+        CCSprite *sprite2 = [CCSprite spriteWithFile:@"PlayButton.png"];
+        CCSprite *sprite3 = [CCSprite spriteWithFile:@"PlayButton.png"];
         
         CCMenuItemSprite *spriteTimeTrailButton = [CCMenuItemSprite itemFromNormalSprite:sprite selectedSprite:sprite2 disabledSprite:sprite3 target:self selector:@selector(timeTrailTouched:)];
         spriteTimeTrailButton.position = ccp(220, 140);

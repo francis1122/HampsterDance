@@ -9,4 +9,4 @@
 #import "Constants.h"
 
 NSString * const SUPERSLOTCAR_FONT_1 = @"AppleGothic";
-NSString * const PBJT_FONT1 = @"AppleGothic";
+NSString * const PBJT_FONT1 = @"Amiga Forever";

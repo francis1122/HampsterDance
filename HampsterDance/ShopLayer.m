@@ -13,7 +13,7 @@
 
 -(id) init{
 	if( (self=[super init] )) {
-        CCLabelTTF* greatest = [CCLabelTTF labelWithString:@"Shop Layer" fontName:SUPERSLOTCAR_FONT_1 fontSize:20];
+        CCLabelTTF* greatest = [CCLabelTTF labelWithString:@"Shop Layer" fontName:PBJT_FONT1 fontSize:20];
         greatest.position = ccp(280, 249);
         ccColor3B green = {154, 255, 56};
         [greatest setColor:green];

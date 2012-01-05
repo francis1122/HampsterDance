@@ -25,7 +25,7 @@
         
         self.isTouchEnabled = YES;
         
-        CCLabelTTF* greatest = [CCLabelTTF labelWithString:@"IT'S PEANUT BUTTER JELLY TIME" fontName:SUPERSLOTCAR_FONT_1 fontSize:34];
+        CCLabelTTF* greatest = [CCLabelTTF labelWithString:@"IT'S PEANUT BUTTER JELLY TIME" fontName:PBJT_FONT1 fontSize:26];
         greatest.position = ccp(200, 39);
         ccColor3B yellow = {224, 225, 0};
         [greatest setColor:yellow];
@@ -139,16 +139,20 @@
 
 -(void) updateGameObjects:(ccTime) dt{
     NSMutableArray *deleteArray = [[[NSMutableArray alloc] init] autorelease];
+    
+    //find notes that are past being played
     for(NoteGameObject *noteGameObject in _gameNotesArray){
         noteGameObject.position = ccp(noteGameObject.position.x, noteGameObject.position.y - (dt * NOTESPEED));
         if(noteGameObject.noteVO.time + _noteDestroyTime < songTime){
             [deleteArray addObject:noteGameObject];
         }
     }
-    
+
+    //destroy note
     for(NoteGameObject* delete in deleteArray){
         [_gameNotesArray removeObject:delete];
         [self removeChild:delete cleanup:YES];
+        [PBJTScene sharedScene].combo = 1;
     }
     
 }
@@ -172,11 +176,6 @@
 #pragma draw
 -(void) draw{
     [super draw];
-    //    BezierCurve *carCurve = [self.trackVO.trackPoints objectAtIndex:self.carPosition.index];
-    
-    //  CGPoint carSpot = [BezierCurve findPositionOnCurve:carCurve atTime:self.carPosition.time];
-   // LevelModel *LM = [LevelModel sharedInstance];
-    //    ccDrawCircle(LM.playerCar.position, 10,0,16,NO);
     glLineWidth(1);
     int height = 100;
     ccDrawLine(ccp(0, height), ccp(480, height));
@@ -225,7 +224,8 @@
                 }
                 
                 
-                [PBJTScene sharedScene].score += [self scoreEvaluator:songTime WithSongTime:noteGameObject.noteVO.time];
+                [PBJTScene sharedScene].score += [self scoreEvaluator:songTime WithSongTime:noteGameObject.noteVO.time] * [PBJTScene sharedScene].combo;
+                [PBJTScene sharedScene].combo += 1;
                 
                 delete = noteGameObject;
                 break;

@@ -16,7 +16,7 @@
 -(id)initWithNoteVO:(NoteVO*) _noteVO{
     
 //    [CCSprite spriteWithFile:];
-    self = [super initWithFile:@"Icon-72.png"];
+    self = [super initWithFile:@"Banana.png"];
     if(self){
         self.noteVO = _noteVO;
         //positionBased on note

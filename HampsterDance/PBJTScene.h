@@ -15,6 +15,7 @@
     PBJTUILayer *uiLayer;
     PBJTPauseLayer *pauseLayer;
     NSInteger score;
+    NSInteger combo;
     BOOL isSongStarted;
     
     BOOL isGamePaused;
@@ -31,6 +32,7 @@
 @property (nonatomic, retain) PBJTUILayer *uiLayer;
 @property (nonatomic, retain) PBJTPauseLayer *pauseLayer;
 @property (nonatomic) NSInteger score;
+@property (nonatomic) NSInteger combo;
 @property BOOL isSongStarted, isGamePaused;
 
 
